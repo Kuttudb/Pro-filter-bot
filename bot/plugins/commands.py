@@ -68,7 +68,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '📣Share our Group💓', url=f"{MT_BOT_UPDATES}"
+                                    '📣Share our Group💓', url=f"whatsapp://send?text=https://t.me/cyclonickmovies"
                                 )
                         ]
                     ]
