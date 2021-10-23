@@ -62,7 +62,7 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton("💢 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 💢", url=f"https://t.me/{MT_CHANNEL_USERNAME}")
+                    InlineKeyboardButton("📣 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 ", url=f"https://t.me/{MT_CHANNEL_USERNAME}")
                 ]
             )
         for filter in filters: # iterating through each files
@@ -86,7 +86,7 @@ async def auto_filter(bot, update):
             file_size = "" if file_size == ("[0 B]") else file_size
             
             # add emoji down below inside " " if you want..
-            button_text = f"{file_size} - 🗂️{file_name}"
+            button_text = f"📂 {file_size}-{file_name}"
             
 
             if file_type == "video":
@@ -209,7 +209,7 @@ async def auto_filter(bot, update):
             await bot.send_photo(
                 chat_id = update.chat.id,
                 photo= MASSAGE_PHOTO,
-                caption=f"<b>🗃️Total File :- {(len_results)} </b>\n<b>📂File Name :-</b> <code>{query}</code>",
+                caption=f"<b>🗃️Total File :- {(len_results)} </b>\n<b>📁File Name :-</b> <code>{query}</code>",
                 reply_markup=reply_markup,
                 parse_mode="html",
                 reply_to_message_id=update.message_id
