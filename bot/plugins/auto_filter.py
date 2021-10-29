@@ -66,10 +66,10 @@ async def auto_filter(bot, update):
                 ]
             )
         for filter in filters: # iterating through each files
-            file_name = filter.get("file_name")
+            file_name = int(filter.get("file_name", "0"))
             file_type = filter.get("file_type")
             file_link = filter.get("file_link")
-            file_size = int(filter.get("file_size", "0"))
+            file_size = filter.get("file_size")
             
             # from B to MiB
             
